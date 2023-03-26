@@ -1,3 +1,101 @@
+:root {
+    --success: #0b836b;
+    --error: #a72727;
+
+    --archive-button-color: #4b4545;
+    --archive-button-color-hover: #161212;
+
+    --border: #ffffff;
+    --border-hover: #e5e2e2;
+    --unread: #f5f5f5;
+    --read: #a09c9c;
+
+    --email-height: 32px;
+}
+
 textarea {
     min-height: 400px;
+}
+
+#email {
+    display: block;
+
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 10px;
+    font-size: 22px;
+    
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid var(--border);
+}
+
+#email:hover {
+    border: 2px solid var(--border-hover);
+}
+
+#emailHeader {
+    height: var(--email-height);
+    width: 75%;
+    float: left;
+}
+
+#emailDate {
+    height: var(--email-height);
+    margin-left: 75%;
+    text-align: right;
+}
+
+.unread {
+    background: var(--unread);
+}
+
+.read {
+    background: var(--read);
+}
+
+#archiveButton {
+    height: 28px;
+    width: 66px;
+
+    position: relative;
+    left: -84px;
+    top: -44px;
+
+    border-radius: 4px;
+    background-color: var(--archive-button-color);
+    font-size: 14px;
+    color: whitesmoke;
+
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#archiveButton:hover {
+    background-color: var(--archive-button-color-hover);
+}
+
+#announcement {
+    position: absolute;
+    padding: 60px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    border-radius: 15px;
+    animation: fadeout 4s 2s;
+    animation-fill-mode: forwards;
+}
+
+.success {
+    background: var(--success);
+}
+
+.error {
+    background: var(--error);
+}
+
+@keyframes fadeout {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
 }
